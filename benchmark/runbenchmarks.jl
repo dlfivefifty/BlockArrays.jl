@@ -31,7 +31,7 @@ end
 
 
 function run_benchmarks(name, tagfilter = @tagged ALL)
-    const paramspath = joinpath(dirname(@__FILE__), "params.jld")
+    paramspath = joinpath(dirname(@__FILE__), "params.jld")
     if !isfile(paramspath)
         println("Tuning benchmarks...")
         tune!(SUITE, verbose=true)
